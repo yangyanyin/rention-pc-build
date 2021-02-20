@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["home"],{b3d7:function(e,n,t){"use strict";t.r(n);var l=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[e._v("首页")])},u=[],c=t("2877"),o={},r=Object(c["a"])(o,l,u,!1,null,null,null);n["default"]=r.exports}}]);
-//# sourceMappingURL=home.4cd7b0a3.js.map

@@ -4,12 +4,14 @@ const express = require('express')
 const app = express()
 const ejs = require('ejs')
 const path = require('path')
+var routers = require('./routers/index')
+
 // 模板引擎
 app.engine('html', ejs.__express)
 app.set('view engine', 'html')
 app.set('views', path.join(__dirname, './build'))
 app.use(express.static('./build'))
-
+app.use(routers)
 app.use((req, res) => {
   res.status(404).send('Sorry cant find that!')
 })
