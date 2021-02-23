@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-
 router.get('/', function (req, res) {
-  console.log('首页')
-  res.render('html/index', { title: '首页' })
+  homeServer((data) => {
+    res.render('html/index', data)
+  })
 })
 
 router.get('/c/:name', function (req, res) {
@@ -17,5 +17,9 @@ router.get('/c/d/:name', function (req, res) {
 router.get('*', function (req, res) {
   res.render('html/index', { title: '全局页面' })
 })
+
+function homeServer (c) {
+  c({title: 'homeServer'})
+}
 
 module.exports = router
