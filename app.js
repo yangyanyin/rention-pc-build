@@ -17,7 +17,7 @@ app.use((req, res) => {
   res.status(404).send('Sorry cant find that!')
 })
 
-app.listen(3000, '0.0.0.0', (req, err) => {
+app.listen(3002, '0.0.0.0', (req, err) => {
   if (err) {
     console.error('服务启动失败，重新启动。')
   } else {
